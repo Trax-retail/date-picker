@@ -1,0 +1,235 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// vars
+$color-trax-purple: #7a48a3;
+$color-trax-yellow: #d2db2f;
+$color-trax-gray: #f5f5f5;
+
+.trax-date-picker {
+  $day-width: 40px;
+
+  float: right;
+  position: relative;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  white-space: initial;
+  color: #555;
+
+  .datepicker-preview {
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    padding: 0 10px;
+    background-color: #eee;
+    border: solid 1px #ddd;
+
+    &:hover {
+      background-color: #f6f8d5;
+      border: solid 1px #aeb627;
+    }
+
+    .icon {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+      vertical-align: sub;
+      background-image: url("img/calendar.png");
+      background-size: cover;
+    }
+  }
+
+  .actual-datepicker {
+    position: absolute;
+    right: 0;
+    top: 55px;
+    padding: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+  }
+
+  .selection-dates {
+    padding: 10px 0 30px;
+
+    .from,
+    .to {
+      margin-right: 5px;
+    }
+
+    .to {
+      margin-left: 20px;
+    }
+
+    .date-input {
+      padding: 10px 12px;
+      border: solid 1px #ddd;
+      background-color: #f5f5f5;
+      font-size: 16px;
+      outline: none;
+
+      &:focus, &:hover {
+        background-color: #f6f8d5;
+        border: solid 1px #aeb627;
+      }
+    }
+
+    .date-error {
+      border-color: red;
+    }
+
+    .date-select-start,
+    .date-select-end {
+      border: solid 1px hsl(208, 40%, 80%);
+      background-color: hsl(202, 100%, 97%);
+    }
+  }
+
+  .panes {
+    display: flex;
+  }
+
+  .pane {
+    padding: $day-width / 2;
+    border: solid 1px #ddd;
+    background-color: $color-trax-gray;
+    vertical-align: top;
+  }
+
+  .change-date {
+    position: absolute;
+    top: 121px;
+    width: 9px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("img/calendar-arrow.png");
+    cursor: pointer;
+
+    &:hover {
+      background-image: url("img/calendar-arrow-active.png");
+    }
+
+    &.previous {
+      transform: scaleX(-1);
+      left: 40px;
+    }
+
+    &.next {
+      right: 40px;
+    }
+  }
+
+  .month-name {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .days-of-month {
+    width: $day-width * 7;
+    margin-top: 10px;
+  }
+
+  .day,
+  .hour {
+    display: inline-block;
+  }
+
+  .day {
+    width: $day-width;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: top;
+    border: solid 1px #ddd;
+    color: #dbcfe6;
+    background-color: #f5f5f5;
+
+    &.enabled {
+      color: $color-trax-purple;
+
+      &:hover {
+        background-color: #f9f2ff;
+      }
+    }
+
+    &.date {
+      cursor: pointer;
+      background-color: #fff;
+    }
+
+    &.day-name {
+      border: none;
+      color: #999;
+    }
+
+    &.today {
+      border-width: 3px;
+      line-height: 26px;
+      font-weight: 900;
+    }
+
+    &.selected {
+      color: hsl(0, 0%, 68%);
+      background-color: lighten($color-trax-yellow, 20%);
+
+      &.enabled {
+        color: #000;
+        background-color: $color-trax-yellow;
+      }
+
+      &:hover {
+        color: #000;
+        background-color: #aeb627;
+      }
+    }
+
+    &.empty {
+      border: none;
+    }
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  .range-buttons {
+    text-align: center;
+    border-bottom: solid 1px #ddd;
+
+    button {
+      font-weight: 500;
+      border: none;
+      background-color: #fff;
+      padding: 20px;
+      color: $color-trax-purple;
+    }
+  }
+
+  .finish-buttons {
+    text-align: right;
+    margin-top: 20px;
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      font-size: 16px;
+      border-radius: 6px;
+
+      &.apply {
+        color: #fff;
+        background-color: $color-trax-purple;
+      }
+
+      &.cancel {
+        background-color: #fff;
+        color: $color-trax-purple;
+      }
+    }
+  }
+}

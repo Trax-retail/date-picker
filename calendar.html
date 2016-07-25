@@ -1,0 +1,75 @@
+<div class="trax-date-picker">
+  <div class="datepicker-preview" ng-click="showDatePicker = !showDatePicker">
+    <span class="icon"></span>
+    <span class="from" ng-if="selection">
+      FROM:
+    </span>
+    <span class="date" ng-if="selection">
+      {{selection.start.format('D MMM, YYYY')}}
+    </span>
+    <span class="to" ng-if="selection">
+      TO:
+    </span>
+    <span class="date" ng-if="selection">
+      {{selection.end.format('D MMM, YYYY')}}
+    </span>
+  </div>
+
+
+  <div class="actual-datepicker" ng-show="showDatePicker">
+    <div class="selection-dates">
+      <span class="from">
+        FROM:
+      </span>
+      <input type="text"
+             class="date-input"
+             date-input="D MMM, YYYY HH:mm"
+             ng-class="{
+               'date-error': !selection.start.isValid(),
+               'date-select-start': dateSelect.start
+             }"
+             ng-model="selection.start" />
+      <span class="to">
+        TO:
+      </span>
+      <input type="text"
+             class="date-input"
+             date-input="D MMM, YYYY HH:mm"
+             ng-class="{
+               'date-error': !selection.end.isValid(),
+               'date-select-start': dateSelect.end
+             }"
+             ng-model="selection.end" />
+    </div>
+    <div class="change-date previous" ng-click="changeMonth.previous()"></div>
+    <div class="change-date next" ng-click="changeMonth.next()"></div>
+    <div class="panes">
+      <div class="pane" ng-repeat="month in calendar track by $index">
+        <div class="month-name">{{month[10].format('MMMM YYYY')}}</div>
+        <div class="days-of-month">
+          <div class="day day-name" ng-repeat="dayName in weekDayNames">{{dayName}}</div>
+          <div class="day"
+               ng-repeat="day in month track by $index"
+               ng-click="select('date', day)"
+               ng-class="{
+                 'date' : day,
+                'empty' : !day,
+             'selected' : day.selected,
+              'enabled' : day.enabled,
+                'today' : day.today
+             }">{{day.format('D')}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="range-buttons">
+      <button ng-click="select('today')">TODAY</button>
+      <button ng-click="select('this week')">THIS WEEK</button>
+      <button ng-click="select('two weeks')">LAST 2 WEEKS</button>
+      <button ng-click="select('this month')">THIS MONTH</button>
+    </div>
+    <div class="finish-buttons">
+      <button class="cancel" ng-click="showDatePicker = false">CANCEL</button>
+      <button class="apply" ng-click="applySelectedDates()">APPLY</button>
+    </div>
+  </div>
+</div>
