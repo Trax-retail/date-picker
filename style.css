@@ -1,83 +1,154 @@
-/*
-Error: Undefined variable: "$color-dull-gray".
-        on line 100 of style.scss
+html {
+  box-sizing: border-box; }
 
-95:   }
-96: 
-97:   .pane {
-98:     padding: $day-width / 2;
-99:     border: solid 1px #ddd;
-100:     background-color: $color-dull-gray;
-101:     vertical-align: top;
-102:   }
-103: 
-104:   .change-date {
-105:     position: absolute;
+*, *:before, *:after {
+  box-sizing: inherit; }
 
-Backtrace:
-style.scss:100
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/script/tree/variable.rb:49:in `_perform'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/script/tree/node.rb:50:in `perform'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `block in with_base'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `with_base'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:431:in `map'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `block in with_base'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `with_base'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:431:in `map'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `block in with_base'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `with_base'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:295:in `render_with_sourcemap'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/plugin.rb:82:in `update_stylesheets'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:363:in `watch_or_update'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/exec/base.rb:52:in `parse'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/lib/sass/exec/base.rb:19:in `parse!'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/gems/sass-3.4.21/bin/scss:13:in `<top (required)>'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/bin/scss:23:in `load'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/bin/scss:23:in `<main>'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `eval'
-/Users/ilyo/.rvm/gems/ruby-2.2.0/bin/ruby_executable_hooks:15:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined variable: \"$color-dull-gray\".\A         on line 100 of style.scss\A \A 95:   }\A 96: \A 97:   .pane {\A 98:     padding: $day-width / 2;\A 99:     border: solid 1px #ddd;\A 100:     background-color: $color-dull-gray;\A 101:     vertical-align: top;\A 102:   }\A 103: \A 104:   .change-date {\A 105:     position: absolute;"; }
+.trax-date-picker {
+  float: right;
+  position: relative;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  white-space: initial;
+  color: #555; }
+  .trax-date-picker .datepicker-preview {
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    padding: 0 10px;
+    background-color: #eee;
+    border: solid 1px #ddd; }
+    .trax-date-picker .datepicker-preview:hover {
+      background-color: #f6f8d5;
+      border: solid 1px #aeb627; }
+    .trax-date-picker .datepicker-preview .icon {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+      vertical-align: sub;
+      background-image: url("img/calendar.png");
+      background-size: cover; }
+  .trax-date-picker .actual-datepicker {
+    position: absolute;
+    right: 0;
+    top: 55px;
+    padding: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: #fff; }
+  .trax-date-picker .selection-dates {
+    padding: 10px 0 30px; }
+    .trax-date-picker .selection-dates .from,
+    .trax-date-picker .selection-dates .to {
+      margin-right: 5px; }
+    .trax-date-picker .selection-dates .to {
+      margin-left: 20px; }
+    .trax-date-picker .selection-dates .date-input {
+      padding: 10px 12px;
+      border: solid 1px #ddd;
+      background-color: #f5f5f5;
+      font-size: 16px;
+      outline: none; }
+      .trax-date-picker .selection-dates .date-input:focus, .trax-date-picker .selection-dates .date-input:hover {
+        background-color: #f6f8d5;
+        border: solid 1px #aeb627; }
+    .trax-date-picker .selection-dates .date-error {
+      border-color: red; }
+    .trax-date-picker .selection-dates .date-select-start,
+    .trax-date-picker .selection-dates .date-select-end {
+      border: solid 1px #b8cde0;
+      background-color: #f0f9ff; }
+  .trax-date-picker .panes {
+    display: flex; }
+  .trax-date-picker .pane {
+    padding: 20px;
+    border: solid 1px #ddd;
+    background-color: #f5f5f5;
+    vertical-align: top; }
+  .trax-date-picker .change-date {
+    position: absolute;
+    top: 121px;
+    width: 9px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("img/calendar-arrow.png");
+    cursor: pointer; }
+    .trax-date-picker .change-date:hover {
+      background-image: url("img/calendar-arrow-active.png"); }
+    .trax-date-picker .change-date.previous {
+      transform: scaleX(-1);
+      left: 40px; }
+    .trax-date-picker .change-date.next {
+      right: 40px; }
+  .trax-date-picker .month-name {
+    font-size: 16px;
+    text-align: center; }
+  .trax-date-picker .days-of-month {
+    width: 280px;
+    margin-top: 10px; }
+  .trax-date-picker .day,
+  .trax-date-picker .hour {
+    display: inline-block; }
+  .trax-date-picker .day {
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: top;
+    border: solid 1px #ddd;
+    color: #dbcfe6;
+    background-color: #f5f5f5; }
+    .trax-date-picker .day.enabled {
+      color: #7a48a3; }
+      .trax-date-picker .day.enabled:hover {
+        background-color: #f9f2ff; }
+    .trax-date-picker .day.date {
+      cursor: pointer;
+      background-color: #fff; }
+    .trax-date-picker .day.day-name {
+      border: none;
+      color: #999; }
+    .trax-date-picker .day.today {
+      border-width: 3px;
+      line-height: 26px;
+      font-weight: 900; }
+    .trax-date-picker .day.selected {
+      color: #adadad;
+      background-color: #e5ea86; }
+      .trax-date-picker .day.selected.enabled {
+        color: #000;
+        background-color: #d2db2f; }
+      .trax-date-picker .day.selected:hover {
+        color: #000;
+        background-color: #aeb627; }
+    .trax-date-picker .day.empty {
+      border: none; }
+  .trax-date-picker button {
+    cursor: pointer; }
+  .trax-date-picker .range-buttons {
+    text-align: center;
+    border-bottom: solid 1px #ddd; }
+    .trax-date-picker .range-buttons button {
+      font-weight: 500;
+      border: none;
+      background-color: #fff;
+      padding: 20px;
+      color: #7a48a3; }
+  .trax-date-picker .finish-buttons {
+    text-align: right;
+    margin-top: 20px; }
+    .trax-date-picker .finish-buttons button {
+      padding: 10px 20px;
+      border: none;
+      font-size: 16px;
+      border-radius: 6px; }
+      .trax-date-picker .finish-buttons button.apply {
+        color: #fff;
+        background-color: #7a48a3; }
+      .trax-date-picker .finish-buttons button.cancel {
+        background-color: #fff;
+        color: #7a48a3; }
+
+/*# sourceMappingURL=style.css.map */
