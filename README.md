@@ -6,3 +6,5 @@ The top controller muat have 3 items:
  - `selection`: A range object of the selection
  - `active-dates` [optional]: An array of range objects if you want to have only sepecific days shown as available (does not effect selection, only visual indicator)
  - `on-apply`: A function to run once you click apply
+
+Demo: [https://trax-retail.github.io/date-picker](https://trax-retail.github.io/date-picker/ "Datepicker demo")
